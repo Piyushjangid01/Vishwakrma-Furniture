@@ -4,6 +4,12 @@ pipeline {
      triggers {
         pollSCM('* * * * *')
     }
+        
+    environment { 
+        NETLIFY_SITE_ID = 'd5893093-63ca-4af3-8192-befba517ea8e'            
+    }
+
+
     stages {
         stage('Checkout Code') {
             steps {
@@ -26,7 +32,22 @@ pipeline {
                 sh 'docker push piyushj01/vishwakrma-furniture:latest'
             }
         }
+         stage('Deploy to Netlify') {
+            steps {
+                withCredentials([string(credentialsId: 'Token-nitlify-token', variable: 'Token-nitlify-token')]) {
+                    sh '''
+                        echo "Installing Netlify CLI"
+                        npm install -g netlify-cli
+
+                        echo "Deploying to Netlify"
+                        netlify deploy --dir=. --prod --auth $Token-nitlify-token --site=$NETLIFY_SITE_ID
+                    '''
+                }
+            }
+        }
+    
     }
+} 
 
     post {
         success {
