@@ -37,7 +37,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'nitlify-token', variable: 'nitlify-token')]) {
                     sh '''
                         echo "Installing Netlify CLI"
-                        npm install -g netlify-cli
+                       sudo npm install -g netlify-cli
 
                         echo "Deploying to Netlify"
                         netlify deploy --dir=. --prod --auth $nitlify-token --site=$NETLIFY_SITE_ID
