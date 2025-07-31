@@ -34,13 +34,13 @@ pipeline {
         }
          stage('Deploy to Netlify') {
             steps {
-                withCredentials([string(credentialsId: 'Token-nitlify-token', variable: 'Token-nitlify-token')]) {
+                withCredentials([string(credentialsId: 'nitlify-token', variable: 'nitlify-token')]) {
                     sh '''
                         echo "Installing Netlify CLI"
                         npm install -g netlify-cli
 
                         echo "Deploying to Netlify"
-                        netlify deploy --dir=. --prod --auth $Token-nitlify-token --site=$NETLIFY_SITE_ID
+                        netlify deploy --dir=. --prod --auth $nitlify-token --site=$NETLIFY_SITE_ID
                     '''
                 }
             }
