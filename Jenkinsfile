@@ -5,6 +5,9 @@ pipeline {
         pollSCM('* * * * *')
     }
         
+    tools {
+        nodejs 'NodeJS 20'
+    }
     environment { 
         NETLIFY_SITE_ID = 'd5893093-63ca-4af3-8192-befba517ea8e'            
     }
