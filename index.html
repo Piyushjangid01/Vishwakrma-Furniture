@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishwakarma Furniture | Aluminium & Glass Experts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Vishwakarma Furniture</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Welcome to Vishwakarma Furniture</h1>
+      <p>Premium Aluminium & Glass Solutions</p>
+      <a href="products.html" class="btn">Explore Now</a>
+    </div>
+  </header>
+
+<!-- ✅ 3D Animated Middle Section -->
+<style>
+  .section-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .card3d {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  .card3d:hover {
+    transform: scale(1.03) rotateX(2deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  }
+
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .card3d h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .card3d p, .card3d blockquote {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+  }
+
+  .card3d blockquote {
+    margin-top: 20px;
+    border-left: 5px solid #ffc107;
+    padding-left: 15px;
+    font-style: italic;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .card3d {
+      padding: 20px;
+    }
+  }
+</style>
+
+<section class="section-container">
+
+  <!-- About Expertise -->
+  <div class="card3d">
+    <h2>🔧 About Our Expertise</h2>
+    <p>
+      We specialize in <strong>modern aluminium and glass doors</strong>, windows, partitions, and custom-designed furniture
+      for homes, offices, and showrooms. Our expert craftsmanship meets cutting-edge design to ensure long-lasting quality and aesthetics.
+    </p>
+  </div>
+
+  <!-- Customer Feedback -->
+  <div class="card3d">
+    <h2>💬 Customer Feedback</h2>
+    <blockquote>
+      “Great service and premium quality work! Highly satisfied.”<br>
+      <strong>– Ankit Sharma</strong>
+    </blockquote>
+    <blockquote>
+      “Professional and on-time delivery. Highly recommend Vishwakarma Furniture!”<br>
+      <strong>– Priya Mehta</strong>
+    </blockquote>
+    <blockquote>
+      “Modern designs and very durable. Loved the finishing!”<br>
+      <strong>– Rahul Jain</strong>
+    </blockquote>
+  </div>
+<!-- 🔽 3D Dual Owner Section -->
+<div class="card3d">
+  <h2>👨‍💼 Owners</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; margin-top: 30px;">
+
+    <!-- Owner 1 -->
+    <div style="flex: 1; min-width: 280px; background: #f9f9f9; border-radius: 12px; padding: 20px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
+      <img src="./pictures/WhatsApp Image 2025-07-31 at 12.32.39 PM.jpeg" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px;">
+      <h3 style="margin: 10px 0;">Mr. Vijay Jangid</h3>
+      <p><strong></strong></p>
+      <p>📞 +91-942512747<br>📧 vijayjangid7417@gmail.com</p>
+      <p><em>"Building elegant furniture with strength and soul."</em></p>
+    </div>
+
+    <!-- Owner 2 -->
+    <div style="flex: 1; min-width: 280px; background: #f9f9f9; border-radius: 12px; padding: 20px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
+      <img src="./pictures/WhatsApp Image 2025-07-31 at 12.26.21 PM.jpeg" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px;">
+      <h3 style="margin: 10px 0;">Mr. Ajay Jangid</h3>
+      <p><strong></strong></p>
+      <p>📞 +91-6261662150<br>📧 Ajayjangid01@gmail.com</p>
+      <p><em>"Crafting dreams into durable design."</em></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Visit Location -->
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.204010847278!2d76.69130357473772!3d25.67315511497216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3966aafea5f33c3f%3A0xe5354d1856fd402a!2sBypass%20Rd%2C%20Sheopur%2C%20Madhya%20Pradesh%20476001!5e0!3m2!1sen!2sin!4v1722414334671!5m2!1sen!2sin" 
+  width="100%" 
+  height="300" 
+  style="border:0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Vishwakarma Furniture | All Rights Reserved</p>
+    <p>Contact: +91-94251XXXX | Email:vishwakrmafurniture@gmail.com

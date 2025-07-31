@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Vishwakarma Furniture</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about-section h2 {
+      font-size: 36px;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-content img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .features {
+      margin-top: 40px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      font-size: 17px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Vishwakarma Furniture</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" style="text-decoration: underline;">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="about-section">
+  <h2>About Us</h2>
+  <div class="about-content">
+    <img src="images/showroom.jpg" alt="Our Workshop">
+    <div class="about-text">
+      <p>
+        Welcome to <strong>Vishwakarma Furniture</strong>, your trusted name in custom aluminium and glass works.  
+        With over <strong>15 years</strong> of experience, we specialize in crafting modern, durable, and aesthetic solutions 
+        for homes, offices, and commercial spaces.
+      </p>
+      <p>
+        From modular aluminium kitchens to designer glass railings, our skilled artisans blend traditional craftsmanship with the latest technology. 
+        We believe in perfection, precision, and timely delivery.
+      </p>
+
+      <div class="features">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>100% customized aluminium and glass solutions</li>
+          <li>Affordable pricing with premium finish</li>
+          <li>Expert team with on-site support</li>
+          <li>All India delivery and installation</li>
+          <li>Over 500+ satisfied clients</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Vishwakarma Furniture | Designed with dedication and durability 🛠️
+</footer>
+
+</body>
+</html>
