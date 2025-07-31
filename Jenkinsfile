@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/piyushjangid7417/Vishwakrma-Furniture.git'
+                git branch: 'main', url: 'https://github.com/Piyushjangid01/Vishwakrma-Furniture.git'
             }
         }
 
@@ -35,7 +35,7 @@ pipeline {
                  body: """
 Build Successful
 
-Project: web-project
+Project: vishkakrma-furniture
 Build Number: ${env.BUILD_NUMBER}
 View Build Log: ${env.BUILD_URL}console
 """
@@ -47,7 +47,7 @@ View Build Log: ${env.BUILD_URL}console
                  body: """
 Build Failed
 
-Project: web-project
+Project: vishkakrma-furniture
 Build Number: ${env.BUILD_NUMBER}
 View Build Log: ${env.BUILD_URL}console
 """
