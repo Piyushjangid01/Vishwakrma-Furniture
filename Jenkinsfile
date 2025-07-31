@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    
-     triggers {
+
+    triggers {
         pollSCM('* * * * *')
     }
 
@@ -27,19 +27,16 @@ pipeline {
                 sh 'docker push piyushj01/vishwakrma-furniture:latest'
             }
         }
-        
-        }
-    
-    }
+    }  
 
     post {
         success {
             mail to: 'piyushjangid7417@gmail.com',
-                 subject: "Jenkins Build #${env.BUILD_NUMBER} Successful",
-                 body: """
+                subject: "Jenkins Build #${env.BUILD_NUMBER} Successful",
+                body: """
 Build Successful
 
-Project: vishkakrma-furniture
+Project: Vishwakrma Furniture
 Build Number: ${env.BUILD_NUMBER}
 View Build Log: ${env.BUILD_URL}console
 """
@@ -47,13 +44,14 @@ View Build Log: ${env.BUILD_URL}console
 
         failure {
             mail to: 'piyushjangid7417@gmail.com',
-                 subject: "Jenkins Build #${env.BUILD_NUMBER} Failed",
-                 body: """
+                subject: "Jenkins Build #${env.BUILD_NUMBER} Failed",
+                body: """
 Build Failed
 
-Project: vishkakrma-furniture
+Project: Vishwakrma Furniture
 Build Number: ${env.BUILD_NUMBER}
 View Build Log: ${env.BUILD_URL}console
 """
         }
     }
+}
