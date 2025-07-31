@@ -74,4 +74,3 @@ View Build Log: ${env.BUILD_URL}console
 """
         }
     }
-}
