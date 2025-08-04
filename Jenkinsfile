@@ -27,30 +27,38 @@ pipeline {
                 sh 'docker push piyushj01/vishwakrma-furniture:latest'
             }
         }
-    }  
+          stage('Deploy to Netlify') {
+            steps {
+                sh 'curl -X POST https://api.netlify.com/build_hooks/688c60d16ff7e330082ea7f2'
+            }
+        } 
+    } 
 
-    post {
+
+     post {
         success {
             mail to: 'piyushjangid7417@gmail.com',
-                subject: "Jenkins Build #${env.BUILD_NUMBER} Successful",
-                body: """
+                 subject: "Jenkins Build #${env.BUILD_NUMBER} Successful",
+                 body: """
 Build Successful
 
-Project: Vishwakrma Furniture
+Project: deploy to netlify
 Build Number: ${env.BUILD_NUMBER}
 View Build Log: ${env.BUILD_URL}console
+view webiste: https://vishwakrma-furniture.netlify.app
 """
         }
 
         failure {
             mail to: 'piyushjangid7417@gmail.com',
-                subject: "Jenkins Build #${env.BUILD_NUMBER} Failed",
-                body: """
+                 subject: "Jenkins Build #${env.BUILD_NUMBER} Failed",
+                 body: """
 Build Failed
 
-Project: Vishwakrma Furniture
+Project: deploy to netlify
 Build Number: ${env.BUILD_NUMBER}
 View Build Log: ${env.BUILD_URL}console
+view webiste: https://vishwakrma-furniture.netlify.app
 """
         }
     }
