@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vishwakrma-furniture
+  labels:
+    app: vishwakrma-furniture
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vishwakrma-furniture
+  template:
+    metadata:
+      labels:
+        app: vishwakrma-furniture
+    spec:
+      containers:
+        - name: vishwakrma-furniture
+          image: piyushj01/vishwakrma-furniture:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
